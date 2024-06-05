@@ -1,0 +1,32 @@
+package com.prabhat.learn.FirstSpring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import in.pp.resources.SpringConfigFile;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	int rollno = 101;
+    	String name = "prabhat";
+    	int marks = 87;
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigFile.class);
+        JdbcTemplate jdbctemplate =context.getBean(JdbcTemplate.class);
+        String insert_sql_query = "INSERT INTO student VALUES(?,?,?)";
+        int count =jdbctemplate.update(insert_sql_query,rollno,name,marks);
+        
+        if(count>0) {
+        	System.out.println("insertion successful");
+        }
+        else {
+        	System.out.println("insertion failed");
+        }
+    }
+}

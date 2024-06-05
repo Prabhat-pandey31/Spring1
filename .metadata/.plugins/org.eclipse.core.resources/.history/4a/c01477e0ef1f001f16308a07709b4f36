@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module SpringDemo2 {
+	requires java.base;
+}

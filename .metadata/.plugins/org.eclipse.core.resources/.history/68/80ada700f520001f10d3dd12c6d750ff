@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Definition for Address bean -->
+    <bean  class="in.pp.beans.Address" id="address1">
+        <property name="city" value="New York"/>
+        <property name="state" value="NY"/>
+        <property name="country" value="USA"/>
+    </bean>
+
+    <!-- Definition for Student bean -->
+    <bean  class="in.pp.beans.Student" id="stdid">
+        <property name="rollno" value="101"/>
+        <property name="name" value="John Doe"/>
+        <property name="address" ref="address1"/>
+    </bean>
+
+</beans>

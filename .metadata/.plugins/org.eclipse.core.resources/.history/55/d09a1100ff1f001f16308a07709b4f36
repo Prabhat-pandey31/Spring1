@@ -1,0 +1,5 @@
+package in.pp.resources;
+
+public class SpringConfigFile {
+
+}

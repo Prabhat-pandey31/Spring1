@@ -1,0 +1,5 @@
+package in.pp.beans;
+
+public class Student {
+
+}
